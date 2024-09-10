@@ -7,7 +7,10 @@
     "dev": "vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
-    "db": "drizzle-kit"
+    "db": "drizzle-kit",
+    "database:dev": "docker compose --profile dev down && docker compose --profile dev up -d",
+    "database:test": "docker compose --profile test down && docker compose --profile test up -d",
+    "database:alldown": "docker compose --profile '*' down"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",

@@ -1,11 +1,15 @@
 import type { Config } from 'drizzle-kit'
 
 export default {
-  out: './drizzle',
-  schema: './app/server/db/schema.ts',
-  breakpoints: true,
+  schema: './app/server/db/schemas/*.ts',
+  out: './app/server/db/drizzle',
   dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.DATABASE_URL as string,
+    url: process.env.DEVELOPMENT_URL as string,
+  },
+  verbose: true,
+  strict: true,
+  introspect: {
+    casing: 'camel',
   },
 } satisfies Config
