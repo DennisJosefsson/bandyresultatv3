@@ -1,5 +1,4 @@
 import { pgEnum } from 'drizzle-orm/pg-core'
-
 export const enumGamesCategory = pgEnum('enum_games_category', [
   'regular',
   'qualification',
